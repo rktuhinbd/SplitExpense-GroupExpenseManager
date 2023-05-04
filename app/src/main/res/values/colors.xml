@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#56B4B8</color>
+    <color name="color_secondary">#82C459</color>
+    <color name="color_on_secondary">#E63C3C</color>
+
+    <!--    Background color -->
+    <color name="status_bar_color">#56B4B8</color>
+    <color name="window_background_color">#FFFFFF</color>
+    <color name="dialog_background_color">#FFFFFF</color>
+    <color name="card_background_color">#FFFFFF</color>
+    <color name="drawer_background_color">#FFFFFF</color>
+    <color name="switch_background_color">#E5E7EB</color>
+
+    <color name="stroke_color">#9CA3AF</color>
+
+    <!--    Text color-->
+    <color name="text_color_primary">#000000</color>
+    <color name="text_color_secondary">#111827</color>
+    <color name="text_color_switch">#FFFFFF</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!--    Grey -->
+    <color name="grey_400">#6B7280</color>
+    <color name="grey_300">#D1D5DB</color>
+    <color name="grey_200">#E5E7EB</color>
+    <color name="grey_100">#F9FAFB</color>
+
+</resources>
