@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Split Expense - Group Expense Manager</string>
+    <string name="app_name" translatable="false">Split Expense - Group Expense Manager</string>
+    <string name="full_name">Full Name</string>
+    <string name="currency">Currency</string>
+    <string name="usd" translatable="false">USD</string>
+    <string name="share_online">Share Online</string>
+    <string name="next">Next</string>
+    <string name="create_group">Create Group</string>
 </resources>

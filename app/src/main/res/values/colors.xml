@@ -22,6 +22,40 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!--    Green (Primary) -->
+    <color name="green_800">#086347</color>
+    <color name="green_700">#0E7B4F</color>
+    <color name="green_500">#1CAB55</color>
+    <color name="green_200">#A4F6AC</color>
+    <color name="green_100">#D0FAD0</color>
+    <color name="green_50">#F3FFF2</color>
+
+    <!--    Green (Support) -->
+    <color name="green_support_600">#005B58</color>
+    <color name="green_support_500">#028969</color>
+    <color name="green_support_400">#05BF6E</color> <!--Used for success-->
+    <color name="green_support_300">#97F8B1</color>
+    <color name="green_support_200">#CAFBD2</color>
+    <color name="green_support_100">#F7FEF8</color>
+
+
+    <!--    Red (Secondary)-->
+    <color name="red_600">#851330</color>
+    <color name="red_500">#930F15</color>
+    <color name="red_400">#E63C3C</color>
+    <color name="red_300">#FCC5B1</color>
+    <color name="red_200">#FDE5D8</color>
+    <color name="red_100">#FFF5ED</color>
+
+
+    <!--    Red (Support) -->
+    <color name="red_support_600">#7A0F37</color>
+    <color name="red_support_500">#97193C</color>
+    <color name="red_support_400">#D33242</color> <!--Used for danger-->
+    <color name="red_support_300">#FABBAE</color>
+    <color name="red_support_200">#FCE0D6</color>
+    <color name="red_support_100">#FFF8F5</color>
+
     <!--    Grey -->
     <color name="grey_400">#6B7280</color>
     <color name="grey_300">#D1D5DB</color>

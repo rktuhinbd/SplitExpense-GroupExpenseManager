@@ -1,5 +1,6 @@
 package com.rktuhinbd.splitxpens
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.rktuhinbd.splitxpens.databinding.ActivityMainBinding
@@ -13,5 +14,14 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        setupListeners()
+    }
+
+    private fun setupListeners() {
+
+        binding.createGroupBtn.setOnClickListener {
+            startActivity(Intent(this, CreateGroupActivity::class.java))
+        }
     }
 }

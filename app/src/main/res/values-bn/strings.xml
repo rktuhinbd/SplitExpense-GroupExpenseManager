@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="full_name">পুরো নাম</string>
+    <string name="currency">মুদ্রা</string>
+    <string name="share_online">অনলাইন শেয়ার করুন</string>
+    <string name="next">পরবর্তী</string>
+    <string name="create_group">গ্রুপ তৈরি করুন</string>
+</resources>
