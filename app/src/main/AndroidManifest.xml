@@ -13,11 +13,17 @@
         android:theme="@style/BaseTheme"
         tools:targetApi="31">
         <activity
-            android:name=".JoinGroupActivity"
+            android:name=".add_member.view.AddMemberActivity"
             android:exported="false"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity"/>
+        <activity
+            android:name=".JoinGroupActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".CreateGroupActivity"
             android:exported="false"

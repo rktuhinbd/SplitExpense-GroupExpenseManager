@@ -21,7 +21,7 @@
         android:layout_marginStart="@dimen/_24dp"
         android:layout_marginTop="@dimen/_24dp"
         android:layout_marginEnd="@dimen/_24dp"
-        android:hint="@string/full_name"
+        android:hint="@string/group_name"
         android:textColorHint="@color/text_color_secondary"
         app:boxStrokeColor="@color/color_primary"
         app:boxStrokeErrorColor="@color/red_support_400"

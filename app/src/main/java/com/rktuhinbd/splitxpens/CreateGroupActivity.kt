@@ -1,7 +1,9 @@
 package com.rktuhinbd.splitxpens
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.rktuhinbd.splitxpens.add_member.view.AddMemberActivity
 import com.rktuhinbd.splitxpens.databinding.ActivityCreateGroupBinding
 
 class CreateGroupActivity : AppCompatActivity() {
@@ -27,6 +29,10 @@ class CreateGroupActivity : AppCompatActivity() {
 
         binding.toolbar.ivBack.setOnClickListener {
             finish()
+        }
+
+        binding.nextBTN.setOnClickListener {
+            startActivity(Intent(this, AddMemberActivity::class.java))
         }
     }
 }

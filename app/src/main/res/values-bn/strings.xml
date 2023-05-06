@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="full_name">পুরো নাম</string>
+    <string name="group_name">গ্রুপের নাম</string>
     <string name="currency">মুদ্রা</string>
     <string name="share_online">অনলাইন শেয়ার করুন</string>
     <string name="next">পরবর্তী</string>
@@ -8,4 +8,7 @@
     <string name="enter_group_code">গ্রুপের কোড লিখুন</string>
     <string name="join">জয়েন করুন</string>
     <string name="join_group">গ্রুপে জয়েন করুন</string>
+    <string name="add_group_participants">গ্রুপে অংশগ্রহণকারীদের যোগ করুন</string>
+    <string name="member_name">সদস্যের নাম</string>
+    <string name="add_member">সদস্য যোগ করুন</string>
 </resources>

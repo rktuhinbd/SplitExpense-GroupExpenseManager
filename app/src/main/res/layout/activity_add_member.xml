@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JoinGroupActivity">
+    tools:context=".add_member.view.AddMemberActivity">
 
     <include
         android:id="@+id/toolbar"
@@ -21,22 +21,22 @@
         android:layout_marginStart="@dimen/_24dp"
         android:layout_marginTop="@dimen/_16dp"
         android:layout_marginEnd="@dimen/_24dp"
-        android:text="@string/enter_group_code"
+        android:text="@string/add_group_participants"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/codeTIL"
+        android:id="@+id/nameTIL"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="@dimen/_120dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
         android:layout_marginTop="@dimen/_8dp"
         android:layout_marginEnd="@dimen/_24dp"
         android:clickable="true"
         android:focusable="true"
-        android:hint="******"
+        android:hint="@string/member_name"
         android:textColorHint="@color/text_color_secondary"
         app:boxStrokeColor="@color/color_primary"
         app:boxStrokeErrorColor="@color/red_support_400"
@@ -46,33 +46,45 @@
         app:hintTextColor="@color/text_color_secondary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleTV"
-        tools:ignore="HardcodedText">
+        app:layout_constraintTop_toBottomOf="@+id/titleTV">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/codeTET"
-            style="@style/EditTextNumberStyle"
+            android:id="@+id/nameTET"
+            style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawablePadding="@dimen/_8dp"
+            android:drawableStart="@drawable/ic_user"
             android:drawableTint="@color/text_color_primary"
-            android:gravity="center"
-            android:maxLength="6"
+            android:maxLength="64"
             tools:ignore="Autofill,LabelFor" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/joinBTN"
-        style="@style/ButtonPrimaryLarge"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMembers"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:layout_marginEnd="@dimen/_24dp"
-        android:text="@string/join"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/codeTIL" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTIL"
+        app:layout_constraintVertical_bias="0"
+        tools:itemCount="4"
+        tools:listitem="@layout/rv_item_add_member" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addMemberBTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_24dp"
+        android:importantForAccessibility="no"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
