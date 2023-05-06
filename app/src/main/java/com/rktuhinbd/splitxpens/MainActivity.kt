@@ -23,5 +23,9 @@ class MainActivity : AppCompatActivity() {
         binding.createGroupBtn.setOnClickListener {
             startActivity(Intent(this, CreateGroupActivity::class.java))
         }
+
+        binding.joinGroupBtn.setOnClickListener {
+            startActivity(Intent(this, JoinGroupActivity::class.java))
+        }
     }
 }

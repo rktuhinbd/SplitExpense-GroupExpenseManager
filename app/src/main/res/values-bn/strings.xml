@@ -5,4 +5,7 @@
     <string name="share_online">অনলাইন শেয়ার করুন</string>
     <string name="next">পরবর্তী</string>
     <string name="create_group">গ্রুপ তৈরি করুন</string>
+    <string name="enter_group_code">গ্রুপের কোড লিখুন</string>
+    <string name="join">জয়েন করুন</string>
+    <string name="join_group">গ্রুপে জয়েন করুন</string>
 </resources>

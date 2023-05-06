@@ -6,4 +6,7 @@
     <string name="share_online">Share Online</string>
     <string name="next">Next</string>
     <string name="create_group">Create Group</string>
+    <string name="enter_group_code">Enter group code</string>
+    <string name="join">Join</string>
+    <string name="join_group">Join Group</string>
 </resources>
