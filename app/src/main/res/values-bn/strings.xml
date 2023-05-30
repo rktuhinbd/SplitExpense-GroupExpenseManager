@@ -11,4 +11,6 @@
     <string name="add_group_participants">গ্রুপে অংশগ্রহণকারীদের যোগ করুন</string>
     <string name="member_name">সদস্যের নাম</string>
     <string name="add_member">সদস্য যোগ করুন</string>
+    <string name="create">প্রণয়ন করুন</string>
+    <string name="united_states_dollar">মার্কিন যুক্তরাষ্ট্র ডলার</string>
 </resources>

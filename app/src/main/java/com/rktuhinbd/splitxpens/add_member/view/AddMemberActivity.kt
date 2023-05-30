@@ -2,6 +2,7 @@ package com.rktuhinbd.splitxpens.add_member.view
 
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.rktuhinbd.splitxpens.R
@@ -30,6 +31,10 @@ class AddMemberActivity : AppCompatActivity() {
     private fun initComponents() {
 
         binding.toolbar.toolbarTitle.text = getString(R.string.add_member)
+
+        binding.toolbar.ctaTV.text = getString(R.string.create)
+
+        binding.toolbar.ctaTV.visibility = View.VISIBLE
 
         rvAdapter = AddMemberAdapter(arrayListOf())
         binding.rvMembers.adapter = rvAdapter

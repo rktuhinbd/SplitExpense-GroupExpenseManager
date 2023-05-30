@@ -31,6 +31,10 @@ class CreateGroupActivity : AppCompatActivity() {
             finish()
         }
 
+        binding.currencyCL.setOnClickListener {
+            startActivity(Intent(this, AddMemberActivity::class.java))
+        }
+
         binding.nextBTN.setOnClickListener {
             startActivity(Intent(this, AddMemberActivity::class.java))
         }

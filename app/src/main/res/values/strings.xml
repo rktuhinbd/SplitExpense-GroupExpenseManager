@@ -12,4 +12,6 @@
     <string name="add_group_participants">Add group participants</string>
     <string name="member_name">Member Name</string>
     <string name="add_member">Add Member</string>
+    <string name="create">Create</string>
+    <string name="united_states_dollar">United States Dollar</string>
 </resources>
