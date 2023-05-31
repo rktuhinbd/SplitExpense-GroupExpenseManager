@@ -13,8 +13,11 @@
         android:theme="@style/BaseTheme"
         tools:targetApi="31">
         <activity
-            android:name=".CurrencyActivity"
-            android:exported="false" />
+            android:name=".currency.view.CurrencyActivity"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
         <activity
             android:name=".add_member.view.AddMemberActivity"
             android:exported="false"

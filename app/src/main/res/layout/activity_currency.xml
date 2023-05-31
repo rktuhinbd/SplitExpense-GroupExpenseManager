@@ -4,9 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/grey_200"
-    tools:context=".CurrencyActivity">
+    android:orientation="vertical"
+    tools:context=".currency.view.CurrencyActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/currencyUSDLayout"
@@ -35,13 +39,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_16dp"
-            android:text="@string/united_states_dollar"
-            android:singleLine="true"
-            android:ellipsize="end"
             android:layout_marginEnd="@dimen/_16dp"
-            app:layout_constraintStart_toEndOf="@+id/shortFormUSDTV"
-            app:layout_constraintEnd_toStartOf="@+id/usdRateTV"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/united_states_dollar"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/usdRateTV"
+            app:layout_constraintStart_toEndOf="@+id/shortFormUSDTV"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -52,11 +56,11 @@
             android:layout_marginEnd="@dimen/_16dp"
             android:text="$1.00"
             android:visibility="gone"
-            tools:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -64,9 +68,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/_1dp"
         android:background="@color/grey_200"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/currencyUSDLayout"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@+id/currencyUSDLayout" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/currencySelectionLayout"
@@ -75,7 +79,9 @@
         android:background="@color/white"
         android:clickable="true"
         android:focusable="true"
-        android:foreground="?attr/selectableItemBackground">
+        android:foreground="?attr/selectableItemBackground"
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <TextView
             android:id="@+id/shortFormSelectedCurrencyTV"
@@ -83,7 +89,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_16dp"
-            android:text="@string/usd"
+            android:text="@string/bdt"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -94,13 +100,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_16dp"
-            android:text="@string/united_states_dollar"
-            android:singleLine="true"
-            android:ellipsize="end"
             android:layout_marginEnd="@dimen/_16dp"
-            app:layout_constraintStart_toEndOf="@+id/shortFormSelectedCurrencyTV"
-            app:layout_constraintEnd_toStartOf="@+id/selectedCurrencyRateTV"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="@string/bangladeshi_tk"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/selectedCurrencyRateTV"
+            app:layout_constraintStart_toEndOf="@+id/shortFormSelectedCurrencyTV"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
@@ -111,22 +117,22 @@
             android:layout_marginEnd="@dimen/_16dp"
             android:text="$1.00"
             android:visibility="gone"
-            tools:visibility="visible"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="HardcodedText" />
+            tools:ignore="HardcodedText"
+            tools:visibility="visible" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/currencyListRV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/currencyListRV"
         android:layout_marginTop="@dimen/_16dp"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="10"
-        tools:listitem="@layout/rv_item_currency"/>
+        tools:listitem="@layout/rv_item_currency" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

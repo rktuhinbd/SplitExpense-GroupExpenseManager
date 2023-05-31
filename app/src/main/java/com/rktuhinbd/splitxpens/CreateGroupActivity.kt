@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.rktuhinbd.splitxpens.add_member.view.AddMemberActivity
+import com.rktuhinbd.splitxpens.currency.view.CurrencyActivity
 import com.rktuhinbd.splitxpens.databinding.ActivityCreateGroupBinding
 
 class CreateGroupActivity : AppCompatActivity() {
@@ -32,7 +33,7 @@ class CreateGroupActivity : AppCompatActivity() {
         }
 
         binding.currencyCL.setOnClickListener {
-            startActivity(Intent(this, AddMemberActivity::class.java))
+            startActivity(Intent(this, CurrencyActivity::class.java))
         }
 
         binding.nextBTN.setOnClickListener {
