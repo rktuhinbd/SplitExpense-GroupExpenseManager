@@ -16,4 +16,5 @@
     <string name="united_states_dollar">United States Dollar</string>
     <string name="bdt" translatable="false">BDT</string>
     <string name="bangladeshi_tk" translatable="false">Bangladeshi taka</string>
+    <string name="choose_currency">Choose Currency</string>
 </resources>

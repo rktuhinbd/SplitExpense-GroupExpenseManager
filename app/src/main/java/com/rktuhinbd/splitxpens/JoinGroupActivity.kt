@@ -26,20 +26,14 @@ class JoinGroupActivity : AppCompatActivity() {
 
         binding.toolbar.toolbarTitle.text = getString(R.string.join_group)
 
-        binding.codeTIL.setOnClickListener {
-            if(binding.codeTET.hasFocus()){
-                binding.codeTET.setText("")
-            }
-        }
-
-        binding.codeTET.addTextChangedListener(object : TextWatcher {
+        binding.codeET.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
             }
 
             override fun onTextChanged(s: CharSequence?, p1: Int, p2: Int, p3: Int) {
 
-                binding.codeTIL.error = null
+                binding.codeET.error = null
 
                 code = s.toString().trim()
 
