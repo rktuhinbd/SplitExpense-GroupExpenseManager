@@ -1,4 +1,4 @@
-package com.rktuhinbd.splitxpens.currency.view
+package com.rktuhinbd.splitxpens.currency.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

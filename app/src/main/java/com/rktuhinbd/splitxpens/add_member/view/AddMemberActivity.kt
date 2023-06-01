@@ -9,6 +9,7 @@ import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.add_member.adapter.AddMemberAdapter
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
 import com.rktuhinbd.splitxpens.databinding.ActivityAddMemberBinding
+import com.rktuhinbd.splitxpens.utilities.Types
 
 class AddMemberActivity : AppCompatActivity() {
 
@@ -36,7 +37,7 @@ class AddMemberActivity : AppCompatActivity() {
 
         binding.toolbar.ctaTV.visibility = View.VISIBLE
 
-        rvAdapter = AddMemberAdapter(arrayListOf())
+        rvAdapter = AddMemberAdapter(context = this, dataList = arrayListOf())
         binding.rvMembers.adapter = rvAdapter
     }
 
@@ -54,8 +55,12 @@ class AddMemberActivity : AppCompatActivity() {
             }
         }
 
-        rvAdapter.onItemClick = {
-            Toast.makeText(this, it.name, Toast.LENGTH_SHORT).show()
+        rvAdapter.onItemClick = { type: String, data: MemberData ->
+            if (type == Types.Menu.rename.name) {
+                Toast.makeText(this, "Rename", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this, "Delete", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }

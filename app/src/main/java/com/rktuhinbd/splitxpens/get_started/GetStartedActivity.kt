@@ -1,18 +1,20 @@
-package com.rktuhinbd.splitxpens
+package com.rktuhinbd.splitxpens.get_started
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.rktuhinbd.splitxpens.databinding.ActivityMainBinding
+import com.rktuhinbd.splitxpens.create_group.view.CreateGroupActivity
+import com.rktuhinbd.splitxpens.databinding.ActivityGetStartedBinding
+import com.rktuhinbd.splitxpens.join_group.view.JoinGroupActivity
 
-class MainActivity : AppCompatActivity() {
+class GetStartedActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityGetStartedBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityGetStartedBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         setupListeners()

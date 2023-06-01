@@ -15,7 +15,7 @@
 
     <TextView
         android:id="@+id/titleTV"
-        style="@style/TextBodySemiBold"
+        style="@style/TextSubtitleSemiBold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
@@ -32,7 +32,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
         android:layout_marginEnd="@dimen/_24dp"
         android:clickable="true"
         android:focusable="true"
@@ -53,9 +53,10 @@
             style="@style/EditTextStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawablePadding="@dimen/_8dp"
             android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="@dimen/_8dp"
             android:drawableTint="@color/text_color_primary"
+            android:imeOptions="actionDone"
             android:maxLength="64"
             tools:ignore="Autofill,LabelFor" />
 
@@ -66,7 +67,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/_24dp"
-        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_16dp"
         android:layout_marginEnd="@dimen/_24dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"

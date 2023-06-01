@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.rktuhinbd.splitxpens.R
-import com.rktuhinbd.splitxpens.Utils.readJsonFile
+import com.rktuhinbd.splitxpens.utilities.Utils.readJsonFile
+import com.rktuhinbd.splitxpens.currency.adapter.CurrencyRvAdapter
 import com.rktuhinbd.splitxpens.currency.model.Currency
 import com.rktuhinbd.splitxpens.databinding.ActivityCurrencyBinding
 

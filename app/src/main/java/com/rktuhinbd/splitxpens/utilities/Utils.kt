@@ -1,4 +1,4 @@
-package com.rktuhinbd.splitxpens
+package com.rktuhinbd.splitxpens.utilities
 
 import android.content.Context
 import com.google.gson.Gson

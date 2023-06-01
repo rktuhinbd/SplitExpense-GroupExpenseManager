@@ -11,7 +11,7 @@
         style="@style/TextBodyMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,9 +21,10 @@
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_1dp"
-        android:layout_marginTop="@dimen/_8dp"
-        android:background="@color/grey_200"
+        android:layout_height="@dimen/_2dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:background="@drawable/shape_dotted_divider_horizontal"
+        android:layerType="software"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameTV" />

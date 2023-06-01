@@ -1,13 +1,11 @@
-package com.rktuhinbd.splitxpens
+package com.rktuhinbd.splitxpens.create_group.view
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
-import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.google.gson.GsonBuilder
+import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.add_member.view.AddMemberActivity
 import com.rktuhinbd.splitxpens.currency.model.Currency
 import com.rktuhinbd.splitxpens.currency.view.CurrencyActivity

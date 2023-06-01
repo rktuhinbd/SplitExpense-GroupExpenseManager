@@ -14,4 +14,6 @@
     <string name="create">প্রণয়ন করুন</string>
     <string name="united_states_dollar">মার্কিন যুক্তরাষ্ট্র ডলার</string>
     <string name="choose_currency">মুদ্রা বাছাই</string>
+    <string name="delete">ডিলিট করুন</string>
+    <string name="rename">নাম পরিবর্তন করুন</string>
 </resources>

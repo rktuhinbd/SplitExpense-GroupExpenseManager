@@ -17,4 +17,6 @@
     <string name="bdt" translatable="false">BDT</string>
     <string name="bangladeshi_tk" translatable="false">Bangladeshi taka</string>
     <string name="choose_currency">Choose Currency</string>
+    <string name="delete">Delete</string>
+    <string name="rename">Rename</string>
 </resources>
