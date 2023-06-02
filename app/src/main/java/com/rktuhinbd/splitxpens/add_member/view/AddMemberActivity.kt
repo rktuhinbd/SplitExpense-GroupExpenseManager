@@ -1,5 +1,6 @@
 package com.rktuhinbd.splitxpens.add_member.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
@@ -9,6 +10,7 @@ import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.add_member.adapter.AddMemberAdapter
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
 import com.rktuhinbd.splitxpens.databinding.ActivityAddMemberBinding
+import com.rktuhinbd.splitxpens.home.HomeActivity
 import com.rktuhinbd.splitxpens.utilities.Types
 
 class AddMemberActivity : AppCompatActivity() {
@@ -45,6 +47,10 @@ class AddMemberActivity : AppCompatActivity() {
 
         binding.toolbar.ivBack.setOnClickListener {
             finish()
+        }
+
+        binding.toolbar.ctaTV.setOnClickListener {
+            startActivity(Intent(this, HomeActivity::class.java))
         }
 
         binding.addMemberBTN.setOnClickListener {

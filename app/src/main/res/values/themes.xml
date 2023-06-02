@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="BaseTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/color_primary</item>
-         <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorSecondary">@color/color_secondary</item>
 
         <item name="colorOnSecondary">@color/color_on_secondary</item>
 
@@ -390,6 +390,15 @@
         <item name="android:textSize">@dimen/text_size_h6</item>
         <item name="fontFamily">@font/ibmplexsans_regular</item>
     </style>
+
+    <style name="BaseTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="BaseTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="BaseTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
 </resources>
