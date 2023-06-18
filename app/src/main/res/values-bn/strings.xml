@@ -16,4 +16,6 @@
     <string name="choose_currency">মুদ্রা বাছাই</string>
     <string name="delete">ডিলিট করুন</string>
     <string name="rename">নাম পরিবর্তন করুন</string>
+    <string name="expenses">Expenses</string>
+    <string name="overview">Overview</string>
 </resources>
