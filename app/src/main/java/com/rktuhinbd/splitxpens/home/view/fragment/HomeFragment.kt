@@ -1,4 +1,4 @@
-package com.rktuhinbd.splitxpens.home.view
+package com.rktuhinbd.splitxpens.home.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -1,4 +1,4 @@
-package com.rktuhinbd.splitxpens.home.adapter
+package com.rktuhinbd.splitxpens.home.view.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

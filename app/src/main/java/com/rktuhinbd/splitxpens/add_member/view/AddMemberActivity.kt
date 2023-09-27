@@ -10,7 +10,7 @@ import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.add_member.adapter.AddMemberAdapter
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
 import com.rktuhinbd.splitxpens.databinding.ActivityAddMemberBinding
-import com.rktuhinbd.splitxpens.home.HomeActivity
+import com.rktuhinbd.splitxpens.home.view.activity.HomeActivity
 import com.rktuhinbd.splitxpens.utilities.Types
 
 class AddMemberActivity : AppCompatActivity() {

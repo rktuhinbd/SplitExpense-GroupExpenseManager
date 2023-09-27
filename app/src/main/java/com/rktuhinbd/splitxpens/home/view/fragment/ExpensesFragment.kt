@@ -1,4 +1,4 @@
-package com.rktuhinbd.splitxpens.home.expenses
+package com.rktuhinbd.splitxpens.home.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,9 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.rktuhinbd.splitxpens.databinding.FragmentExpensesBinding
-import com.rktuhinbd.splitxpens.databinding.FragmentHomeBinding
 import com.rktuhinbd.splitxpens.home.viewmodel.ExpensesViewModel
-import com.rktuhinbd.splitxpens.home.viewmodel.HomeViewModel
 
 class ExpensesFragment : Fragment() {
 
