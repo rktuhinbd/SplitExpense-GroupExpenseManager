@@ -6,7 +6,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.rktuhinbd.splitxpens.create_group.view.CreateGroupActivity
 import com.rktuhinbd.splitxpens.databinding.ActivityGetStartedBinding
 import com.rktuhinbd.splitxpens.join_group.view.JoinGroupActivity
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class GetStartedActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityGetStartedBinding

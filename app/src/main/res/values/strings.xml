@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Split Expense - Group Expense Manager</string>
+    <string name="app_name" translatable="false">Split - Expense Manager</string>
     <string name="group_name">Group Name</string>
     <string name="currency">Currency</string>
     <string name="usd" translatable="false">USD</string>
@@ -19,6 +19,7 @@
     <string name="choose_currency">Choose Currency</string>
     <string name="delete">Delete</string>
     <string name="rename">Rename</string>
+
     <string name="title_activity_home">HomeActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -30,6 +31,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+
     <string name="expenses">Expenses</string>
     <string name="overview">Overview</string>
 </resources>

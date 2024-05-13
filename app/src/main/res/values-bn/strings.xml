@@ -16,6 +16,18 @@
     <string name="choose_currency">মুদ্রা বাছাই</string>
     <string name="delete">ডিলিট করুন</string>
     <string name="rename">নাম পরিবর্তন করুন</string>
-    <string name="expenses">Expenses</string>
-    <string name="overview">Overview</string>
+    <string name="expenses">খরচ</string>
+    <string name="overview">ওভারভিউ</string>
+
+    <string name="title_activity_home">হোম অ্যাক্টিভিটি</string>
+    <string name="navigation_drawer_open">নেভিগেশন ড্রয়ার খুলুন</string>
+    <string name="navigation_drawer_close">নেভিগেশন ড্রয়ার বন্ধ করুন</string>
+    <string name="nav_header_title">অ্যান্ড্রয়েড স্টুডিও</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">নেভিগেশন হেডার</string>
+    <string name="action_settings">সেটিংস</string>
+
+    <string name="menu_home">হোম</string>
+    <string name="menu_gallery">গ্যালারি</string>
+    <string name="menu_slideshow">স্লাইডশো</string>
 </resources>

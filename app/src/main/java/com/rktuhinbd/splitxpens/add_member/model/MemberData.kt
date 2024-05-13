@@ -1,3 +1,7 @@
 package com.rktuhinbd.splitxpens.add_member.model
 
-data class MemberData(var name: String)
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
+data class MemberData(var name: String) : Parcelable

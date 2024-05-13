@@ -10,7 +10,9 @@ import com.rktuhinbd.splitxpens.add_member.view.AddMemberActivity
 import com.rktuhinbd.splitxpens.currency.model.Currency
 import com.rktuhinbd.splitxpens.currency.view.CurrencyActivity
 import com.rktuhinbd.splitxpens.databinding.ActivityCreateGroupBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class CreateGroupActivity : AppCompatActivity() {
 
     val TAG = "CreateGroupActivity"

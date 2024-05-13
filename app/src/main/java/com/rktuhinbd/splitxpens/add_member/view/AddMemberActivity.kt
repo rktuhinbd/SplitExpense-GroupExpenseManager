@@ -5,19 +5,26 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.View
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.add_member.adapter.AddMemberAdapter
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
+import com.rktuhinbd.splitxpens.add_member.viewmodel.AddMemberViewModel
 import com.rktuhinbd.splitxpens.databinding.ActivityAddMemberBinding
 import com.rktuhinbd.splitxpens.home.view.activity.HomeActivity
 import com.rktuhinbd.splitxpens.utilities.Types
+import com.rktuhinbd.splitxpens.utils.NetworkUtils
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AddMemberActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddMemberBinding
 
     private lateinit var rvAdapter: AddMemberAdapter
+
+    private val viewModel: AddMemberViewModel by viewModels()
 
     private var memberList: MutableList<MemberData> = arrayListOf()
 
@@ -28,6 +35,7 @@ class AddMemberActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initComponents()
+        initObservers()
         setupListeners()
     }
 
@@ -41,6 +49,21 @@ class AddMemberActivity : AppCompatActivity() {
 
         rvAdapter = AddMemberAdapter(context = this, dataList = arrayListOf())
         binding.rvMembers.adapter = rvAdapter
+    }
+
+    private fun initObservers() {
+
+        viewModel.dataObserver.observe(this@AddMemberActivity) { data ->
+            if (data != null) {
+                if (!NetworkUtils.isInternetAvailable(this@AddMemberActivity)) {
+                    Toast.makeText(
+                        this@AddMemberActivity,
+                        "Internet Connection Unavailable!",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+            }
+        }
     }
 
     private fun setupListeners() {
