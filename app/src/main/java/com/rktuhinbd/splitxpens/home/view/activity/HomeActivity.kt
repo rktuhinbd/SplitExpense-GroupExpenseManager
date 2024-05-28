@@ -29,8 +29,6 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: ViewPagerAdapter
 
-    private val viewModel: AddMemberViewModel by viewModels()
-
     private val TAG = "HomeActivity"
 
 
@@ -44,20 +42,6 @@ class HomeActivity : AppCompatActivity() {
         initListeners()
         setupViewPager()
         setupTabLayout()
-
-        viewModel.dataObserver.observe(this@HomeActivity) { data ->
-            if (data != null) {
-                if (!NetworkUtils.isInternetAvailable(this@HomeActivity)) {
-                    Toast.makeText(
-                        this@HomeActivity,
-                        "Internet Connection Unavailable!",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-
-                Log.d(TAG, GsonBuilder().setPrettyPrinting().create().toJson(data))
-            }
-        }
     }
 
     private fun initComponents() {
