@@ -1,18 +1,26 @@
 package com.rktuhinbd.splitxpens.home.view.activity
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
+import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import com.google.gson.GsonBuilder
 import com.rktuhinbd.splitxpens.R
+import com.rktuhinbd.splitxpens.add_member.viewmodel.AddMemberViewModel
 import com.rktuhinbd.splitxpens.databinding.ActivityHomeBinding
 import com.rktuhinbd.splitxpens.home.view.adapter.ViewPagerAdapter
 import com.rktuhinbd.splitxpens.home.view.fragment.ExpensesFragment
 import com.rktuhinbd.splitxpens.home.view.fragment.HomeFragment
+import com.rktuhinbd.splitxpens.utils.NetworkUtils
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityHomeBinding
@@ -20,6 +28,10 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: ViewPagerAdapter
+
+    private val viewModel: AddMemberViewModel by viewModels()
+
+    private val TAG = "HomeActivity"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,6 +44,20 @@ class HomeActivity : AppCompatActivity() {
         initListeners()
         setupViewPager()
         setupTabLayout()
+
+        viewModel.dataObserver.observe(this@HomeActivity) { data ->
+            if (data != null) {
+                if (!NetworkUtils.isInternetAvailable(this@HomeActivity)) {
+                    Toast.makeText(
+                        this@HomeActivity,
+                        "Internet Connection Unavailable!",
+                        Toast.LENGTH_LONG
+                    ).show()
+                }
+
+                Log.d(TAG, GsonBuilder().setPrettyPrinting().create().toJson(data))
+            }
+        }
     }
 
     private fun initComponents() {

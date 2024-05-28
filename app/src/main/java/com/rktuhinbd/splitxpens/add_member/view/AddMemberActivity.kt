@@ -3,18 +3,22 @@ package com.rktuhinbd.splitxpens.add_member.view
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.GsonBuilder
 import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.add_member.adapter.AddMemberAdapter
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
+import com.rktuhinbd.splitxpens.add_member.model.MemberEntityData
 import com.rktuhinbd.splitxpens.add_member.viewmodel.AddMemberViewModel
 import com.rktuhinbd.splitxpens.databinding.ActivityAddMemberBinding
 import com.rktuhinbd.splitxpens.home.view.activity.HomeActivity
 import com.rktuhinbd.splitxpens.utilities.Types
 import com.rktuhinbd.splitxpens.utils.NetworkUtils
+import com.rktuhinbd.splitxpens.utils.TimeUtil
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -53,17 +57,19 @@ class AddMemberActivity : AppCompatActivity() {
 
     private fun initObservers() {
 
-        viewModel.dataObserver.observe(this@AddMemberActivity) { data ->
-            if (data != null) {
-                if (!NetworkUtils.isInternetAvailable(this@AddMemberActivity)) {
-                    Toast.makeText(
-                        this@AddMemberActivity,
-                        "Internet Connection Unavailable!",
-                        Toast.LENGTH_LONG
-                    ).show()
-                }
-            }
-        }
+//        viewModel.dataObserver.observe(this@AddMemberActivity) { data ->
+//            if (data != null) {
+//                if (!NetworkUtils.isInternetAvailable(this@AddMemberActivity)) {
+//                    Toast.makeText(
+//                        this@AddMemberActivity,
+//                        "Internet Connection Unavailable!",
+//                        Toast.LENGTH_LONG
+//                    ).show()
+//                }
+//
+//                Log.d("AddMemberTAG", GsonBuilder().setPrettyPrinting().create().toJson(data))
+//            }
+//        }
     }
 
     private fun setupListeners() {
@@ -73,6 +79,13 @@ class AddMemberActivity : AppCompatActivity() {
         }
 
         binding.toolbar.ctaTV.setOnClickListener {
+
+            viewModel.addMember(
+                MemberEntityData(
+                    date = TimeUtil.getCurrentDateTime(),
+                    memberData = memberList
+                )
+            )
             startActivity(Intent(this, HomeActivity::class.java))
         }
 
