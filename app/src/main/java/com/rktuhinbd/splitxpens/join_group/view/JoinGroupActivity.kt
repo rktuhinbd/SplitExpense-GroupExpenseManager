@@ -1,11 +1,13 @@
 package com.rktuhinbd.splitxpens.join_group.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.databinding.ActivityJoinGroupBinding
+import com.rktuhinbd.splitxpens.home.view.activity.HomeActivity
 
 class JoinGroupActivity : AppCompatActivity() {
 
@@ -53,6 +55,10 @@ class JoinGroupActivity : AppCompatActivity() {
 
         binding.toolbar.ivBack.setOnClickListener {
             finish()
+        }
+
+        binding.joinBTN.setOnClickListener {
+            startActivity(Intent(this@JoinGroupActivity, HomeActivity::class.java))
         }
     }
 }

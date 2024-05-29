@@ -3,21 +3,18 @@ package com.rktuhinbd.splitxpens.add_member.view
 import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
-import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.google.gson.GsonBuilder
 import com.rktuhinbd.splitxpens.R
-import com.rktuhinbd.splitxpens.add_member.adapter.AddMemberAdapter
+import com.rktuhinbd.splitxpens.add_member.adapter.MembersAdapter
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
 import com.rktuhinbd.splitxpens.add_member.model.MemberEntityData
 import com.rktuhinbd.splitxpens.add_member.viewmodel.AddMemberViewModel
 import com.rktuhinbd.splitxpens.databinding.ActivityAddMemberBinding
 import com.rktuhinbd.splitxpens.home.view.activity.HomeActivity
 import com.rktuhinbd.splitxpens.utilities.Types
-import com.rktuhinbd.splitxpens.utils.NetworkUtils
 import com.rktuhinbd.splitxpens.utils.TimeUtil
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -26,7 +23,7 @@ class AddMemberActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityAddMemberBinding
 
-    private lateinit var rvAdapter: AddMemberAdapter
+    private lateinit var rvAdapter: MembersAdapter
 
     private val viewModel: AddMemberViewModel by viewModels()
 
@@ -39,7 +36,6 @@ class AddMemberActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         initComponents()
-        initObservers()
         setupListeners()
     }
 
@@ -51,25 +47,8 @@ class AddMemberActivity : AppCompatActivity() {
 
         binding.toolbar.ctaTV.visibility = View.VISIBLE
 
-        rvAdapter = AddMemberAdapter(context = this, dataList = arrayListOf())
+        rvAdapter = MembersAdapter(context = this, dataList = arrayListOf())
         binding.rvMembers.adapter = rvAdapter
-    }
-
-    private fun initObservers() {
-
-//        viewModel.dataObserver.observe(this@AddMemberActivity) { data ->
-//            if (data != null) {
-//                if (!NetworkUtils.isInternetAvailable(this@AddMemberActivity)) {
-//                    Toast.makeText(
-//                        this@AddMemberActivity,
-//                        "Internet Connection Unavailable!",
-//                        Toast.LENGTH_LONG
-//                    ).show()
-//                }
-//
-//                Log.d("AddMemberTAG", GsonBuilder().setPrettyPrinting().create().toJson(data))
-//            }
-//        }
     }
 
     private fun setupListeners() {
@@ -86,22 +65,25 @@ class AddMemberActivity : AppCompatActivity() {
                     memberData = memberList
                 )
             )
-            startActivity(Intent(this, HomeActivity::class.java))
+            startActivity(Intent(this@AddMemberActivity, HomeActivity::class.java))
         }
 
         binding.addMemberBTN.setOnClickListener {
             if (!TextUtils.isEmpty(binding.nameTET.text.toString().trim())) {
                 memberList.add(MemberData(binding.nameTET.text.toString().trim()))
-                rvAdapter.updateData(memberList)
+
+                rvAdapter = MembersAdapter(context = this, dataList = memberList)
+                binding.rvMembers.adapter = rvAdapter
+
                 binding.nameTET.text?.clear()
             }
         }
 
         rvAdapter.onItemClick = { type: String, data: MemberData ->
             if (type == Types.Menu.rename.name) {
-                Toast.makeText(this, "Rename", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Rename ${data.name}", Toast.LENGTH_SHORT).show()
             } else {
-                Toast.makeText(this, "Delete", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "Delete ${data.name}", Toast.LENGTH_SHORT).show()
             }
         }
     }

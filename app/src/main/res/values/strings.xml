@@ -34,4 +34,8 @@
 
     <string name="expenses">Expenses</string>
     <string name="overview">Overview</string>
+    <string name="resolve">Resolve</string>
+    <string name="invite">Invite</string>
+    <string name="create_new_group_or_join">Please decide whether you want to create a new group or join an existing one.</string>
+    <string name="get_started">Get started!</string>
 </resources>

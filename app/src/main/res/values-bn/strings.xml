@@ -30,4 +30,8 @@
     <string name="menu_home">হোম</string>
     <string name="menu_gallery">গ্যালারি</string>
     <string name="menu_slideshow">স্লাইডশো</string>
+    <string name="resolve">মীমাংসা করুন</string>
+    <string name="invite">ইনভাইট</string>
+    <string name="create_new_group_or_join">আপনি একটি নতুন গ্রুপ তৈরি করতে চান নাকি বিদ্যমান একটিতে যোগ দিতে চান তা অনুগ্রহ করে সিদ্ধান্ত নিন।</string>
+    <string name="get_started">শুরু করা যাক!</string>
 </resources>

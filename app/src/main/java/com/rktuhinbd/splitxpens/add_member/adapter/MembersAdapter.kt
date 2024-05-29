@@ -1,5 +1,6 @@
 package com.rktuhinbd.splitxpens.add_member.adapter
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
 import android.view.LayoutInflater
@@ -9,33 +10,38 @@ import android.widget.PopupMenu
 import androidx.recyclerview.widget.RecyclerView
 import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
-import com.rktuhinbd.splitxpens.databinding.RvItemAddMemberBinding
+import com.rktuhinbd.splitxpens.databinding.RvItemMembersBinding
 import com.rktuhinbd.splitxpens.utilities.Types
 
-class AddMemberAdapter(
+class MembersAdapter(
     private val context: Context,
     private val dataList: MutableList<MemberData>
-) : RecyclerView.Adapter<AddMemberAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<MembersAdapter.ViewHolder>() {
 
     var onItemClick: ((String, MemberData) -> Unit)? = null
 
-    inner class ViewHolder(val binding: RvItemAddMemberBinding) :
+    inner class ViewHolder(val binding: RvItemMembersBinding) :
         RecyclerView.ViewHolder(binding.root) {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding =
-            RvItemAddMemberBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+            RvItemMembersBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
 
         val data = dataList[position]
+        val binding = viewHolder.binding
 
-        holder.binding.nameTV.text = data.name
+        binding.nameTV.text = data.name
 
-        holder.binding.root.setOnLongClickListener {
+        if (dataList.size > 1 && position == dataList.size - 1) {
+            binding.divider.visibility = View.GONE
+        }
+
+        binding.root.setOnLongClickListener {
             showPopupMenu(it, data)
             true
         }
@@ -48,6 +54,7 @@ class AddMemberAdapter(
 
         val popupMenu = PopupMenu(context, view)
         popupMenu.inflate(R.menu.popup_menu)
+        popupMenu.gravity = android.view.Gravity.END
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             popupMenu.setForceShowIcon(true)
         }
@@ -69,6 +76,8 @@ class AddMemberAdapter(
         popupMenu.show()
     }
 
+
+    @SuppressLint("NotifyDataSetChanged")
     fun updateData(newData: List<MemberData>) {
         dataList.clear()
         dataList.addAll(newData)

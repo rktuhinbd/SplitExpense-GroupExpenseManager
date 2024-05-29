@@ -1,5 +1,6 @@
 package com.rktuhinbd.splitxpens.home.view.activity
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -28,9 +29,6 @@ class HomeActivity : AppCompatActivity() {
     private lateinit var tabLayout: TabLayout
     private lateinit var viewPager: ViewPager2
     private lateinit var adapter: ViewPagerAdapter
-
-    private val TAG = "HomeActivity"
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -61,6 +59,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     private fun setupViewPager() {
 
         viewPager.offscreenPageLimit = 1

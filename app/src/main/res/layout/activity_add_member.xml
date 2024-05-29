@@ -65,7 +65,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvMembers"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginStart="@dimen/_24dp"
         android:layout_marginTop="@dimen/_16dp"
         android:layout_marginEnd="@dimen/_24dp"
@@ -74,9 +74,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameTIL"
-        app:layout_constraintVertical_bias="0"
+        android:fadingEdge="vertical"
+        android:fadingEdgeLength="@dimen/_16dp"
         tools:itemCount="4"
-        tools:listitem="@layout/rv_item_add_member" />
+        tools:listitem="@layout/rv_item_members" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addMemberBTN"
