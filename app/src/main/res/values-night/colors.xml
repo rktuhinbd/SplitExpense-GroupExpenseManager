@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="color_primary">#56B4B8</color>
-    <color name="color_secondary">#82C459</color>
-    <color name="color_on_secondary">#E63C3C</color>
+    <!--    Primary Brand Color (Dark) -->
+    <color name="color_primary">#121212</color>
+    <color name="color_primary_variant">#070A10</color>
+    <color name="color_on_primary">#332940</color>
+
+    <!--    Secondary Brand Color (Dark) -->
+    <color name="color_secondary">#FF7597</color>
+    <color name="color_secondary_variant">#FF0266</color>
+    <color name="color_on_secondary">#332940</color>
 
     <!--    Background color -->
     <color name="status_bar_color">#101112</color>

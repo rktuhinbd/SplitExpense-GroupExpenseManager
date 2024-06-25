@@ -2,14 +2,21 @@
     <!-- Base application theme. -->
     <style name="BaseTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
-        <item name="colorPrimary">@color/color_primary</item>
-        <item name="colorSecondary">@color/color_secondary</item>
 
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
         <item name="colorOnSecondary">@color/color_on_secondary</item>
 
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
 
+        <!-- Background and text colors for light mode. -->
         <item name="android:windowBackground">@color/window_background_color</item>
         <item name="android:navigationBarColor">@color/window_background_color</item>
         <item name="android:textColorPrimary">@color/text_color_primary</item>

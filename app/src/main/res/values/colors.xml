@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--    Primary Brand Color (Light) -->
     <color name="color_primary">#56B4B8</color>
+    <color name="color_primary_variant">#56B4B8</color>
+    <color name="color_on_primary">#A4F6AC</color>
+
+    <!--    Secondary Brand Color (Light) -->
     <color name="color_secondary">#82C459</color>
+    <color name="color_secondary_variant">#82C459</color>
     <color name="color_on_secondary">#E63C3C</color>
 
     <!--    Background color -->
