@@ -25,8 +25,8 @@
     <color name="text_color_secondary">#111827</color>
     <color name="text_color_switch">#FFFFFF</color>
 
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
 
     <color name="teal_400">#26A69A</color>
 
