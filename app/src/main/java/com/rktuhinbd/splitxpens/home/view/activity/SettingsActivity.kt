@@ -2,14 +2,10 @@ package com.rktuhinbd.splitxpens.home.view.activity
 
 import android.os.Bundle
 import android.widget.CompoundButton
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.databinding.ActivitySettingsBinding
-import com.rktuhinbd.splitxpens.utilities.MyPreferences
+import com.rktuhinbd.splitxpens.utils.MyPreferences
 
 class SettingsActivity : AppCompatActivity() {
 

@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.rktuhinbd.splitxpens.R
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
 import com.rktuhinbd.splitxpens.databinding.RvItemMembersBinding
-import com.rktuhinbd.splitxpens.utilities.Types
+import com.rktuhinbd.splitxpens.utils.Types
 
 class MembersAdapter(
     private val context: Context,

@@ -1,4 +1,4 @@
-package com.rktuhinbd.splitxpens.utilities
+package com.rktuhinbd.splitxpens.utils
 
 object Types {
 

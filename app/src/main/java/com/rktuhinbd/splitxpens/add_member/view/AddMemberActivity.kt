@@ -14,7 +14,7 @@ import com.rktuhinbd.splitxpens.add_member.model.MemberEntityData
 import com.rktuhinbd.splitxpens.add_member.viewmodel.AddMemberViewModel
 import com.rktuhinbd.splitxpens.databinding.ActivityAddMemberBinding
 import com.rktuhinbd.splitxpens.home.view.activity.HomeActivity
-import com.rktuhinbd.splitxpens.utilities.Types
+import com.rktuhinbd.splitxpens.utils.Types
 import com.rktuhinbd.splitxpens.utils.TimeUtil
 import dagger.hilt.android.AndroidEntryPoint
 

@@ -1,24 +1,18 @@
 package com.rktuhinbd.splitxpens.home.view.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.google.gson.GsonBuilder
 import com.rktuhinbd.splitxpens.add_member.adapter.MembersAdapter
 import com.rktuhinbd.splitxpens.add_member.model.MemberData
 import com.rktuhinbd.splitxpens.add_member.viewmodel.AddMemberViewModel
-import com.rktuhinbd.splitxpens.databinding.FragmentExpensesBinding
 import com.rktuhinbd.splitxpens.databinding.FragmentHomeBinding
 import com.rktuhinbd.splitxpens.home.viewmodel.HomeViewModel
-import com.rktuhinbd.splitxpens.utilities.Types
-import com.rktuhinbd.splitxpens.utils.NetworkUtils
+import com.rktuhinbd.splitxpens.utils.Types
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

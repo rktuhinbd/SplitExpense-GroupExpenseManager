@@ -1,4 +1,4 @@
-package com.rktuhinbd.splitxpens.utilities
+package com.rktuhinbd.splitxpens.utils
 import android.content.Context
 import androidx.preference.PreferenceManager
 
