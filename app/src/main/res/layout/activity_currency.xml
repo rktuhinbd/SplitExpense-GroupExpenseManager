@@ -16,14 +16,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_16dp"
-        android:background="@color/white"
+        android:background="@color/window_background_color"
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/currencySelectionLayout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_56dp"
-            android:background="@color/white"
+            android:background="@color/window_background_color"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground"
@@ -84,7 +84,7 @@
             android:id="@+id/currencyUSDLayout"
             android:layout_width="match_parent"
             android:layout_height="@dimen/_56dp"
-            android:background="@color/white"
+            android:background="@color/window_background_color"
             android:clickable="true"
             android:focusable="true"
             android:foreground="?attr/selectableItemBackground">

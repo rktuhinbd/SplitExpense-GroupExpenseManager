@@ -22,7 +22,7 @@
 
     <!--    Text color-->
     <color name="text_color_primary">#FFFFFF</color>
-    <color name="text_color_secondary">#4B5563</color>
+    <color name="text_color_secondary">#D1D5DB</color>
     <color name="text_color_switch">#1B1B1D</color>
 
     <color name="black">#FF000000</color>

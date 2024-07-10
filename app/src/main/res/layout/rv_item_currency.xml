@@ -9,7 +9,7 @@
         android:id="@+id/body"
         android:layout_width="match_parent"
         android:layout_height="@dimen/_56dp"
-        android:background="@color/white"
+        android:background="@color/window_background_color"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?attr/selectableItemBackground">
