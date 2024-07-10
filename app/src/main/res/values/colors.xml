@@ -13,6 +13,7 @@
     <!--    Background color -->
     <color name="status_bar_color">#56B4B8</color>
     <color name="window_background_color">#FFFFFF</color>
+    <color name="window_primary_background_color">#56B4B8</color>
     <color name="dialog_background_color">#FFFFFF</color>
     <color name="card_background_color">#FFFFFF</color>
     <color name="drawer_background_color">#FFFFFF</color>

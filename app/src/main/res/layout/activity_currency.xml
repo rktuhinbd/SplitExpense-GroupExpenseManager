@@ -15,7 +15,7 @@
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:background="@color/window_background_color"
         android:orientation="vertical">
 
@@ -137,7 +137,7 @@
         android:id="@+id/currencyListRV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16dp"
+        android:layout_marginTop="@dimen/_8dp"
         android:orientation="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:itemCount="10"

@@ -39,7 +39,7 @@
         android:gravity="center"
         android:maxLength="6"
         android:hint="******"
-        app:hintTextColor="@color/text_color_secondary"
+        app:hintTextColor="@color/grey_400"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleTV"

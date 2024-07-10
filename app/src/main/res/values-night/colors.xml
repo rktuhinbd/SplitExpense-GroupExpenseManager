@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--    Primary Brand Color (Dark) -->
-    <color name="color_primary">#121212</color>
-    <color name="color_primary_variant">#070A10</color>
-    <color name="color_on_primary">#332940</color>
+    <color name="color_primary">#56B4B8</color>
+    <color name="color_primary_variant">#56B4B8</color>
+    <color name="color_on_primary">#A4F6AC</color>
 
     <!--    Secondary Brand Color (Dark) -->
     <color name="color_secondary">#FF7597</color>
     <color name="color_secondary_variant">#FF0266</color>
-    <color name="color_on_secondary">#332940</color>
+    <color name="color_on_secondary">#A4F6AC</color>
 
     <!--    Background color -->
     <color name="status_bar_color">#101112</color>
     <color name="window_background_color">#1B1B1D</color>
+    <color name="window_primary_background_color">#1B1B1D</color>
     <color name="dialog_background_color">#2D2E30</color>
     <color name="card_background_color">#1F2122</color>
     <color name="drawer_background_color">#232429</color>
